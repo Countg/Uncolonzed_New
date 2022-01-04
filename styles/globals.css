@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,119 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+
+/* spartan-regular - latin */
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 400;
+  
+  src: local(''),
+       url('/fonts/spartan-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/spartan-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/spartan-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/spartan-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/spartan-v7-latin-regular.svg#Spartan') format('svg'); /* Legacy iOS */
+}
+/* spartan-800 - latin */
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 800;
+ 
+  src: local(''),
+       url('/fonts/spartan-v7-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/spartan-v7-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/spartan-v7-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/spartan-v7-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/spartan-v7-latin-800.svg#Spartan') format('svg'); /* Legacy iOS */
+}
+/* spartan-900 - latin */
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 900;
+  
+  src: local(''),
+       url('/fonts/spartan-v7-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/spartan-v7-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/spartan-v7-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/spartan-v7-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/spartan-v7-latin-900.svg#Spartan') format('svg'); /* Legacy iOS */
+}
+
+/* arimo-regular - latin */
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/arimo-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/arimo-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/arimo-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/arimo-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/arimo-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/arimo-v17-latin-regular.svg#Arimo') format('svg'); /* Legacy iOS */
+}
+/* arimo-500 - latin */
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/arimo-v17-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/arimo-v17-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/arimo-v17-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/arimo-v17-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/arimo-v17-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/arimo-v17-latin-500.svg#Arimo') format('svg'); /* Legacy iOS */
+}
+/* arimo-700 - latin */
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/arimo-v17-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/arimo-v17-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/arimo-v17-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/arimo-v17-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/arimo-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/arimo-v17-latin-700.svg#Arimo') format('svg'); /* Legacy iOS */
+}
+/* arimo-600 - latin */
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/arimo-v17-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/arimo-v17-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/arimo-v17-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/arimo-v17-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/arimo-v17-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/arimo-v17-latin-600.svg#Arimo') format('svg'); /* Legacy iOS */
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 4px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding: 9px;
+  transition: background-size .3s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#FF2B3A, #FF2B3A)
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%
+  
 }
