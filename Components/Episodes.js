@@ -1,18 +1,23 @@
 import React, {useEffect, useState} from "react";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import { CircularProgress } from "@material-ui/core";
 
 
 export default function EpisodeContainer({ episodes }){
 
     const [currentEpisodes, setCurrentEpisodes] = useState([])
+    const [loading, setLoading] = useState(true)
 
 
     useEffect(() => {
      const newEpisodes = episodes.splice(0, 6);
      setCurrentEpisodes(newEpisodes)
+     setLoading(false)
        
-    }, [])
+    }, []);
+
+
 
 
    
@@ -45,16 +50,17 @@ export default function EpisodeContainer({ episodes }){
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20">
-          {/* Single github Repo */}
   
-          {currentEpisodes &&
-            currentEpisodes.map((latestRepo) => (
-              <EpisodeCard eps={latestRepo} key={latestRepo.guid}/>
-            ))}
-        </div>
-      </section>
-  
+            { loading ? <CircularProgress/> : 
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20">
+             {/* Single github Repo */}
+     
+             {currentEpisodes &&
+               currentEpisodes.map((latestRepo) => (
+                 <EpisodeCard eps={latestRepo} key={latestRepo.guid}/>
+               ))}
+           </div>}
+    </section>
     )
 };
 
@@ -64,26 +70,33 @@ const EpisodeCard = ({eps}) => {
   
     
     return(
-        <div className="md:mt-4 ease-in-out duration-300 hover:-translate-y-6">
-    <img src={eps.thumbnail} className="shadow"/>
-      <AudioPlayer 
-        src={eps.enclosure.link} 
-        autoPlay={false}
-        customAdditionalControls={[]}
-        layout="stacked-reverse"
-        style={{color: 'white', marginBottom: 5 }}
-        /> 
+      
+    
+        
+    <div className="md:mt-4 ease-in-out duration-300 hover:-translate-y-6">
      
-      <a
-        href={eps.link}
-        className="font-Arimo font-semibold  group flex flex-row space-x-2 w-full items-center"
-      >
- 
-        <p>Check the episodes </p>
-        <div className="transform  group-hover:translate-x-2 transition duration-300">
-          &rarr;
-        </div>
-      </a>
+          <img src={eps.thumbnail} className="shadow"/>
+          <AudioPlayer 
+            src={eps.enclosure.link} 
+            autoPlay={false}
+            customAdditionalControls={[]}
+            layout="stacked-reverse"
+            style={{color: 'white', marginBottom: 5 }}
+            /> 
+         
+          <a
+            href={eps.link}
+            className="font-Arimo font-semibold  group flex flex-row space-x-2 w-full items-center"
+          >
+     
+            <p>Check the episodes </p>
+            <div className="transform  group-hover:translate-x-2 transition duration-300">
+              &rarr;
+            </div>
+          </a>
+
+      
+  
     </div>
     )
 

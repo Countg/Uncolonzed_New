@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { SiItunes, SiPatreon } from "react-icons/si";
 import { FaSpotify } from "react-icons/fa";
+import { CircularProgress } from "@material-ui/core";
 
 
 
@@ -8,6 +9,8 @@ import { FaSpotify } from "react-icons/fa";
 export default function Hero({episodes}) {
 
 const [episode, setEpisode] = useState([]);
+const [loading, setLoading] = useState(true)
+
  
 
 
@@ -16,7 +19,12 @@ useEffect(() => {
   const latestEpisode = episodes.sort((a,b) => new Date(b.pubDate).getTime() > new Date(a.pubDate).getTime() ? 1 : -1).splice(0,1)
 
   setEpisode(latestEpisode)
-}, [])
+  setLoading(false)
+  
+}, []);
+
+
+
  
 
 
@@ -54,12 +62,15 @@ useEffect(() => {
         </div>
         {/* Image container */}
         <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
-          <div className="w-3/4 relative">
-          {episode &&
+         { loading ? <CircularProgress/> :
+         <div className="w-3/4 relative">
+          {
+          
+          episode &&
           episode.map((latestEpisode) => (
            <LatestEpisodeCard latestEpisode={latestEpisode} key={latestEpisode.guid}/>
              ))}
-          </div>
+          </div>}
         </div>
       </div>
     );
