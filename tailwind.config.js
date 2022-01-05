@@ -5,18 +5,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: "jit",
-  purge: [
-    './components/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}'
-  ],
- 
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    fontFamily:{
-      'Spartan': ['Spartan', ...defaultTheme.fontFamily.sans],
-      'Arimo' : ['Arimo', ...defaultTheme.fontFamily.sans]
-
-    },
     extend: {
       transitionDuration: {
         0: "0ms",
