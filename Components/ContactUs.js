@@ -56,11 +56,12 @@ export default function ContactUs() {
 
        
         <div className="img-container pb-8">
-        <a href="https://www.patreon.com/bePatron?u=24957059" data-patreon-widget-type="become-patron-button"  className="mb-20 md:mb-0 px-8 py-4 rounded-md  shadow-lg bg-red-500 flex flex-row space-x-4 items-center">
+        <a href="https://www.patreon.com/bePatron?u=24957059"  className="mb-20 md:mb-0 px-8 py-4 rounded-md  shadow-lg bg-red-500 flex flex-row space-x-4 items-center">
        
           <p className="md:text-xs lg:text-2xl text-4xl text-center font-spartan font-bold text-gray-200 mx-auto">Join Now!</p>
            
-     </a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+     </a>
+     {/* <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script> */}
         </div>
       </div>
       </div>

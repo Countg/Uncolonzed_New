@@ -32,11 +32,12 @@ export default function CallToAction() {
   
   </div>
   <div className="hirenow-button mx-auto">
-  <a href="https://www.patreon.com/bePatron?u=24957059" data-patreon-widget-type="become-patron-button"  className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-red-500 shadow-lg text-xl flex flex-row space-x-4 items-center hover:border-gray-300 transition duration-100 transform hover:-translate-y-2 hover:scale-100">
+  <a href="https://www.patreon.com/bePatron?u=24957059"  className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-red-500 shadow-lg text-xl flex flex-row space-x-4 items-center hover:border-gray-300 transition duration-100 transform hover:-translate-y-2 hover:scale-100">
         <SiPatreon className="text-gray-900"/>
           <p className="md:text-base xl:text-2xl sm:text-2xl font-spartan font-bold text-gray-200">Join Now!</p>
            
-     </a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+     </a>
+     {/* <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script> */}
    
   </div>
 
