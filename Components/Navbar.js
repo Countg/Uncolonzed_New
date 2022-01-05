@@ -22,7 +22,7 @@ return (
         <div className="flex flex-col">
           <Link href="/">
             <a>
-              <h1 className="font-Spartan font-extrabold text-2xl dark:text-gray-100">
+              <h1 className="font-Spartan font-bold text-2xl dark:text-gray-100">
                uncolonized 
               </h1>
               <p className="text-xs text-center bg-cyan-300 font-Arimo font-normal text-gray-800 dark:text-gray-900 dark:bg-yellow-400">
