@@ -16,7 +16,7 @@ const [loading, setLoading] = useState(true)
 
 
 useEffect(() => {
-  const latestEpisode = episodes.sort((a,b) => new Date(b.pubDate).getTime() > new Date(a.pubDate).getTime() ? 1 : -1).splice(0,1)
+  const latestEpisode = episodes.splice(0,1)
 
   setEpisode(latestEpisode)
   setLoading(false)
