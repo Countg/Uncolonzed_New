@@ -36,7 +36,7 @@ export default function Modal({ name, bio, link, toggleHandler, image}) {
               </div>
               {/*footer*/}
               <div className="flex items-center justify-end p-9 border-t border-solid border-blueGray-200 rounded-b">
-              <a
+              <button
                   className="mb-20 md:mb-0 px-8 py-4 rounded-md shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center  bg-cyan-500 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   type="button"
                   target='blank'
@@ -53,7 +53,7 @@ export default function Modal({ name, bio, link, toggleHandler, image}) {
                 strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               SOCIAL LINKS
-                </a>
+                </button>
                 
                 
                
