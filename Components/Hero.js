@@ -40,7 +40,7 @@ export default function Hero({ episodes }) {
       {/* Image container */}
       <div className='hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20'>
         {loading ? (
-          <CircularProgress />
+          <CircularProgress color='success' />
         ) : (
           <div className='w-3/4 relative'>
             {episode &&
