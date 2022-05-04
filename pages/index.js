@@ -7,7 +7,6 @@ import Hero from '../Components/Hero';
 import EpisodeContainer from '../Components/Episodes';
 import AboutSection from '../Components/AboutSection';
 import CallToAction from '../Components/CallToAction';
-import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
 
 export default function Home({ episodeData }) {
   return (
@@ -19,10 +18,6 @@ export default function Home({ episodeData }) {
       <AboutSection />
       <CallToAction />
       <EpisodeContainer episodes={episodeData} />
-      <MessengerCustomerChat
-        pageId='111002157049733"'
-        appId='714205756394335'
-      />
     </ContainerBlock>
   );
 }
