@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SiItunes, SiPatreon } from 'react-icons/si';
 import { FaSpotify } from 'react-icons/fa';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@mui/material'; // Updated for MUI v5
 
 export default function Hero({ episodeData }) {
   const [episode, setEpisode] = useState([]);

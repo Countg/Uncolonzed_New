@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@mui/material'; // Updated for MUI v5
 
 export default function EpisodeContainer({ episodeData }) {
   const [currentEpisodes, setCurrentEpisodes] = useState([]);
