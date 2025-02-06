@@ -13,7 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@hookform/resolvers": "^2.8.5",
-    "@madzadev/audio-player": "^1.1.11",
+    "@madzadev/audio-player": "^2.1.14",
     "@material-ui/core": "^4.12.3",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "@mui/material": "^5.2.7",
