@@ -13,11 +13,11 @@ export default function Home({ episodeData }) {
     <ContainerBlock
       title='Uncolonized Podcast - Race, pop culture and Politics, from a Canadian perspective'
       description='Uncolonized is a funny and blunt podcast about race, politics, and culture, from a Canadian perspective.'>
-      <Hero episodes={episodeData} />
+      <Hero episodeData={episodeData} />
 
       <AboutSection />
       <CallToAction />
-      <EpisodeContainer episodes={episodeData} />
+      <EpisodeContainer episodeData={episodeData} />
     </ContainerBlock>
   );
 }

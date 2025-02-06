@@ -3,14 +3,18 @@ import { SiItunes, SiPatreon } from 'react-icons/si';
 import { FaSpotify } from 'react-icons/fa';
 import { CircularProgress } from '@material-ui/core';
 
-export default function Hero({ episodes }) {
+export default function Hero({ episodeData }) {
   const [episode, setEpisode] = useState([]);
+  const [image, setImage] = useState();
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const latestEpisode = episodes.splice(0, 1);
+    const latestEpisode = episodeData.episodes.splice(0, 1);
+    const mainImage = episodeData.image;
 
     setEpisode(latestEpisode);
+    setImage(mainImage);
     setLoading(false);
   }, []);
 
@@ -48,6 +52,7 @@ export default function Hero({ episodes }) {
                 <LatestEpisodeCard
                   latestEpisode={latestEpisode}
                   key={latestEpisode.guid}
+                  mainImage={image}
                 />
               ))}
           </div>
@@ -57,11 +62,11 @@ export default function Hero({ episodes }) {
   );
 }
 
-const LatestEpisodeCard = ({ latestEpisode }) => {
+const LatestEpisodeCard = ({ latestEpisode, mainImage }) => {
   return (
     <div className='github-repo'>
       <a href={latestEpisode.link}>
-        <img src={latestEpisode.thumbnail} className=' shadow' />
+        <img src={mainImage} className=' shadow' />
       </a>
 
       <div className='flex flex-row justify-between mt-4'>

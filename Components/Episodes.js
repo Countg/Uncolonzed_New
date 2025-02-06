@@ -3,13 +3,17 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import { CircularProgress } from '@material-ui/core';
 
-export default function EpisodeContainer({ episodes }) {
+export default function EpisodeContainer({ episodeData }) {
   const [currentEpisodes, setCurrentEpisodes] = useState([]);
+  const [mainImage, setMainImage] = useState();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const newEpisodes = episodes.splice(0, 6);
-    setCurrentEpisodes(newEpisodes);
+    const latestEpisode = episodeData.episodes.splice(0, 6);
+    const mainImage = episodeData.image;
+
+    setCurrentEpisodes(latestEpisode);
+    setMainImage(mainImage);
     setLoading(false);
   }, []);
 
@@ -51,7 +55,11 @@ export default function EpisodeContainer({ episodes }) {
 
           {currentEpisodes &&
             currentEpisodes.map((latestRepo) => (
-              <EpisodeCard eps={latestRepo} key={latestRepo.guid} />
+              <EpisodeCard
+                eps={latestRepo}
+                key={latestRepo.guid}
+                mainImage={mainImage}
+              />
             ))}
         </div>
       )}
@@ -59,10 +67,10 @@ export default function EpisodeContainer({ episodes }) {
   );
 }
 
-const EpisodeCard = ({ eps }) => {
+const EpisodeCard = ({ eps, mainImage }) => {
   return (
     <div className='md:mt-4 ease-in-out duration-300 hover:-translate-y-6'>
-      <img src={eps.thumbnail} className='shadow' />
+      <img src={mainImage} className='shadow' />
       <AudioPlayer
         src={eps.enclosure.link}
         autoPlay={false}
